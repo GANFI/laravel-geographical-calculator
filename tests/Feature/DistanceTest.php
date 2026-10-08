@@ -22,9 +22,9 @@ class DistanceTest extends OrchestraTestCase
             ->setPoint([33, 40])
             ->getDistance();
 
-        $this->assertEquals([
+        $this->assertEqualsWithDelta([
             '1-2' => ['km' => 1258.1691302282],
-        ], $result);
+        ], $result, 0.0000000001);
     }
 
     /**

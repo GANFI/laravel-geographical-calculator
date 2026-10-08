@@ -21,10 +21,10 @@ class AreasTest extends OrchestraTestCase
             ->setPoint([33, 40])
             ->getCenter();
 
-        $this->assertEquals([
+        $this->assertEqualsWithDelta([
             'lat' => 27.508023496931,
             'long' => 38.424795502212,
-        ], $result);
+        ], $result, 0.0000000001);
     }
 
     /**
